@@ -2,6 +2,7 @@ package Com.Lambton;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Vehicle {
     public static long vehicleIdentificationNumber;
@@ -9,7 +10,8 @@ public class Vehicle {
     private String manufacturerName;
     private boolean isSelfDrive;
     private boolean isInsured;
-    public HashMap<Integer,String> driver;
+    //public HashMap<Integer,String> driver;
+    String Driver;
     private int noOfSeat;
     public String prefixDetails;
     private String insuranceProviderName;
@@ -25,11 +27,33 @@ public class Vehicle {
         this.vehicleDescription = vehicleDescription;
         this.manufacturerName = manufacturerName;
         this.isSelfDrive = isSelfDrive;
-        this.isInsured = isInsured;
-        this.noOfSeat = noOfSeat;
-        this.fuelType = fuelType;
+        if (isSelfDrive == false) {
+            System.out.println("Enter Driver's Name: ");
+            Scanner inputDriver = new Scanner(System.in);
+            String driver = inputDriver.nextLine();
+            if (isSelfDrive == false) {
+                this.Driver = driver;
+            } else {
+                this.Driver = null;
+            }
+            this.isInsured = isInsured;
+            if (isInsured == true) {
+                System.out.println("Input Insurance Name Provider: ");
+                Scanner inputInsuranceProvider = new Scanner(System.in);
+                String insuranceNameProvider = inputInsuranceProvider.nextLine();
+                this.insuranceProviderName = insuranceNameProvider;
+            } else {
+                this.insuranceProviderName = null;
+            }
+            this.isInsured = isInsured;
+            this.noOfSeat = noOfSeat;
+            this.fuelType = fuelType;
+            this.vehicleList.put(String.valueOf(vehicleIdentificationNumber),
+                    manufacturerName);
+        }
     }
-    public VehicleManagement.VEHICLETYPE getVehicleType() {
+    public VehicleManagement.VEHICLETYPE getVehicleType()
+    {
         return vehicleType;
     }
 
@@ -37,14 +61,20 @@ public class Vehicle {
         this.vehicleType = vehicleType;
     }
 
+        public String getDriver() {
+            return Driver;
+        }
 
-    public void setDriver(HashMap<Integer, String> driver) {
+        public void setDriver(String driver) {
+            Driver = driver;
+        }
+  /*  public void setDriver(HashMap<Integer, String> driver) {
         this.driver = driver;
     }
 
     public long getVehicleIdentificationNumber() {
         return vehicleIdentificationNumber;
-    }
+    }*/
     public void setVehicleIdentificationNumber(long vehicleIdentificationNumber) {
         this.vehicleIdentificationNumber = vehicleIdentificationNumber;
     }
@@ -70,10 +100,10 @@ public class Vehicle {
         return isSelfDrive;
     }
 
-    public HashMap<Integer, String> getDriver() {
+   /* public HashMap<Integer, String> getDriver() {
         return driver;
     }
-
+*/
     public Boolean setSelfDrive(boolean selfDrive) {
         isSelfDrive = selfDrive;
         return isSelfDrive;
