@@ -3,7 +3,7 @@ package Com.Lambton;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class VehicleRent {
+public class VehicleRent implements IDisplay {
 
     LocalDate rentStartDate;
     LocalDate rentEndDate;
@@ -90,4 +90,16 @@ public class VehicleRent {
         }
         return totalFare;
     }
+    
+    public void display() {
+        System.out.println("Rent Start Date: " + getRentStartDate());
+        System.out.println("Rent End Date: " + getRentEndDate());
+        System.out.println("Rented No. of days: " + getRentedDays());
+        System.out.println("Vehicle: " + getVehicleName());
+        System.out.println("Vehicle Type: " + getVehicleType());
+        System.out.println("No. of Km. drived: " + getNoOfKmDrived()+"km");
+        System.out.println("Total bill to pay: $" + getTotalFare());
+    }
+
+
 }
