@@ -16,7 +16,7 @@ public abstract class Vehicle implements IDisplay{
     public String prefixDetails;
     private String insuranceProviderName;
     private VehicleManagement.FUEL fuelType;
-    private static VehicleManagement.VEHICLETYPE vehicleType;
+    public static VehicleManagement.VEHICLETYPE vehicleType;
     public int baseRate;
     public int ratePerKm;
     static String str;

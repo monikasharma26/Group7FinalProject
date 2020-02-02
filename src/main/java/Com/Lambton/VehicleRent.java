@@ -10,7 +10,7 @@ public class VehicleRent implements IDisplay {
     long rentedDays;
     long vehicleId;
     String vehicleName;
-    VehicleManagement.VEHICLETYPE vehicleType;
+   public VehicleManagement.VEHICLETYPE vehicleType;
     float noOfKmDrived;
     float totalFare;
     public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate, VehicleManagement.VEHICLETYPE vehicleType,long vehicleId, float noOfKmDrived) {
