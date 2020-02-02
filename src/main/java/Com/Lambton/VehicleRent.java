@@ -12,4 +12,11 @@ public class VehicleRent {
     VehicleManagement.VEHICLETYPE vehicleType;
     float noOfKmDrived;
     float totalFare;
+    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate, VehicleManagement.VEHICLETYPE vehicleType,long vehicleId, float noOfKmDrived) {
+        this.rentStartDate = rentStartDate;
+        this.rentEndDate = rentEndDate;
+        this.vehicleType=vehicleType;
+        this.vehicleId = vehicleId;
+        this.noOfKmDrived = noOfKmDrived;
+    }
 }
