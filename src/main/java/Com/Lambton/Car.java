@@ -1,19 +1,17 @@
 package Com.Lambton;
 
+public class Car extends Vehicle{
 
-public class Car extends Vehicle implements IDisplay{
+    public VehicleManagement.CarType carType;
+    public String carColor;
 
-    VehicleManagement.CarType carType;
-    String carColor;
-
-    public Car(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
+    public Car(String vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
                boolean isSelfDrive/*, String driver*/, boolean isInsured,/* String insuranceNameProvider,*/
                int noOfSeat, VehicleManagement.FUEL fuelType,/* Type vehicleType, int baseRate, int ratePerKm,*/
                VehicleManagement.CarType carType, String carColor) {
         super(vehicleIdentificationNumber, vehicleDescription, manufacturerName,
-                isSelfDrive, /*driver,*/ isInsured, /*insuranceNameProvider,*/
-                noOfSeat, fuelType/*, vehicleType, baseRate, ratePerKm*/);
-        super.vehicleType = VehicleManagement.VEHICLETYPE.BUS;
+                isSelfDrive,isInsured,noOfSeat, fuelType);
+        super.vehicleType = VehicleManagement.VEHICLETYPE.CAR;
         this.carType = carType;
         this.carColor = carColor;
     }
@@ -35,12 +33,12 @@ public class Car extends Vehicle implements IDisplay{
     }
 
     @Override
-    public void display() {
-        super.display();
+    public String  display() {
         super.display();
         System.out.println("Car Type: " + getCarType());
         System.out.println("Car Color: " + getCarColor());
         System.out.println();
+        return toString();
 
     }
 

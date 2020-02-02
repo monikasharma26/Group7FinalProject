@@ -1,10 +1,10 @@
 package Com.Lambton;
 
-public class Motorcycle  extends Vehicle implements IDisplay{
+public class Motorcycle  extends Vehicle{
 
     double topSpeed;
     double milage;
-    public Motorcycle(long vehicleIdentificationNumber, String vehicleDescription,
+    public Motorcycle(String vehicleIdentificationNumber, String vehicleDescription,
                       String manufacturerName, boolean isSelfDrive,
                       boolean isInsured, int noOfSeat,VehicleManagement.FUEL fuelType,
                       double topSpeed, double milage) {
@@ -31,11 +31,12 @@ public class Motorcycle  extends Vehicle implements IDisplay{
     }
 
     @Override
-    public void display() {
+    public String  display() {
         super.display();
         System.out.println("Top Speed: " + getTopSpeed()+"km/hr");
         System.out.println("Mileage: " + getMilage()+" mpg");
         System.out.println();
+        return toString();
     }
 
 }

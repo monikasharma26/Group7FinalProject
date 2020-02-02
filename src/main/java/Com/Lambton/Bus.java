@@ -1,13 +1,13 @@
 package Com.Lambton;
 
-public class Bus extends Vehicle implements IDisplay {
+public class Bus extends Vehicle  {
 
 
     VehicleManagement.BusType typeOfBus;
     boolean isAccessibilityServiceAvailable;
     boolean isWifiAvailable;
 
-    public Bus(long vehicleIdentificationNumber, String vehicleDescription,
+    public Bus(String vehicleIdentificationNumber, String vehicleDescription,
                String manufacturerName, boolean isSelfDrive,
                boolean isInsured,
                int noOfSeat, VehicleManagement.FUEL fuelType,
@@ -48,12 +48,13 @@ public class Bus extends Vehicle implements IDisplay {
     }
 
     @Override
-    public void display() {
+    public String display() {
         super.display();
         System.out.println("Bus Type: " + getTypeOfBus());
         System.out.println("Accessibility Service Avavilable: " + isAccessibilityServiceAvailable());
         System.out.println("Wifi Available: " + isWifiAvailable());
         System.out.println();
+        return toString();
     }
 
 

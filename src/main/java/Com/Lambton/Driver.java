@@ -1,17 +1,17 @@
 package Com.Lambton;
 
+import java.time.LocalDate;
 import java.util.Date;
 
-public class Driver extends Person implements IDisplay {
+public class Driver extends Person  {
 
     long licenceNumber;
     boolean isDrivingHistoryCleared;
     Double salary;
 
-    public Driver(int id, String firstName, String lastName, VehicleManagement.GENDER gender, Date birthDate, String mobileNumber,
-                  String emailId, String userName, String password,
-                  long licenceNumber, boolean isDrivingHistoryCleared, double salary) {
-        super(id, firstName, lastName, gender, birthDate, mobileNumber, emailId, userName, password);
+    public Driver(int id, String firstName, String lastName, String mobileNumber, String emailId, String userName, VehicleManagement.GENDER gender,
+                  LocalDate birthDate, String password, long licenceNumber, boolean isDrivingHistoryCleared, Double salary) {
+        super(id, firstName, lastName, mobileNumber, emailId, userName, gender, birthDate, password);
         this.licenceNumber = licenceNumber;
         this.isDrivingHistoryCleared = isDrivingHistoryCleared;
         this.salary = salary;
@@ -44,22 +44,26 @@ public class Driver extends Person implements IDisplay {
     }
 
     public void setSalary(Double salary) {
-        this.salary = salary;
+        if (salary<0){
+            this.salary=0.0;
+        }else {
+            this.salary = salary;
+        }
     }
 
     @Override
-    public void display() {
+    public String  display() {
         System.out.println("Id: " + prefixPlacing());
         super.display();
         System.out.println("Licence Number: " + getLicenceNumber());
         System.out.println("Driving History: " + isDrivingHistoryCleared());
         System.out.println("Salary: $" + getSalary());
         System.out.println();
-
+    return toString();
     }
 
     public String prefixPlacing() {
-        str = new String(String.valueOf(prefix.DRI) + "_");
+        str = new String(String.valueOf(VehicleManagement.PERSONPREFIX.DR) + "_");
         str = str.concat(String.valueOf(id));
         return str;
     }
