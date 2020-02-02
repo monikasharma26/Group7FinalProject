@@ -16,4 +16,15 @@ public class Vehicle {
     private VehicleManagement.VEHICLETYPE vehicleType;
     public int baseRate;
     public int ratePerKm;
+    public HashMap<Integer,String> vehicleDetails;
+    public Vehicle(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName, boolean isSelfDrive, boolean isInsured,
+                   int noOfSeat, VehicleManagement.FUEL fuelType) {
+        this.vehicleIdentificationNumber = vehicleIdentificationNumber;
+        this.vehicleDescription = vehicleDescription;
+        this.manufacturerName = manufacturerName;
+        this.isSelfDrive = isSelfDrive;
+        this.isInsured = isInsured;
+        this.noOfSeat = noOfSeat;
+        this.fuelType = fuelType;
+    }
 }
