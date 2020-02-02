@@ -61,7 +61,12 @@ public abstract class Person implements  IDisplay{
         return gender;
     }
     public void setLastName(String lName) {
-        this.lastName= lName;
+        if (lastName == null || firstName.equalsIgnoreCase("")) {
+            this.lastName = "No Name";
+        } else {
+            this.lastName = lName;
+        }
+     
     }
 
     public String getMobileNumber() {
