@@ -9,8 +9,8 @@ public class VehicleManagement {
     }
     public enum PERSONPREFIX{
         CO,
-        MOT,
-        BUS
+        DR,
+        OW
 
     }
     public enum VEHICLETYPE{
