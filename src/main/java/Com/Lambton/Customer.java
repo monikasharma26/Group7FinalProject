@@ -9,7 +9,7 @@ public class Customer extends  Person
     String city;
     String[] vehicleRent;
 
-    public Customer(int id, int age, String firstName, String lastName, String mobileNumber, String emailId, String userName,
+    public Customer(int id, String firstName, String lastName, String mobileNumber, String emailId, String userName,
                     VehicleManagement.GENDER gender, LocalDate birthDate, String password, String address, String city) {
         super(id, firstName, lastName, mobileNumber, emailId, userName, gender, birthDate, password);
         this.address = address;
