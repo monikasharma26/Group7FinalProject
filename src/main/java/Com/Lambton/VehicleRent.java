@@ -1,6 +1,7 @@
 package Com.Lambton;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class VehicleRent {
 
@@ -36,5 +37,35 @@ public class VehicleRent {
 
     public void setVehicleType(VehicleManagement.VEHICLETYPE vehicleType) {
         this.vehicleType = vehicleType;
+    }
+
+    public LocalDate getRentStartDate() {
+        return rentStartDate;
+    }
+
+    public void setRentStartDate(LocalDate rentStartDate) {
+        this.rentStartDate = rentStartDate;
+    }
+
+    public LocalDate getRentEndDate() {
+        return rentEndDate;
+    }
+
+    public void setRentEndDate(LocalDate rentEndDate) {
+        this.rentEndDate = rentEndDate;
+    }
+
+    public long getRentedDays() {
+        rentedDays = getRentStartDate().until(getRentEndDate(), ChronoUnit.DAYS);
+        return rentedDays;
+    }
+
+
+    public float getNoOfKmDrived() {
+        return noOfKmDrived;
+    }
+
+    public void setNoOfKmDrived(float noOfKmDrived) {
+        this.noOfKmDrived = noOfKmDrived;
     }
 }
