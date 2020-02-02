@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Vehicle {
+public class Vehicle implements IDisplay{
     public static long vehicleIdentificationNumber;
     private String vehicleDescription;
     private String manufacturerName;
@@ -206,4 +206,23 @@ public class Vehicle {
         }
         return str;
     }
+
+ 
+    public void display()
+    {
+        System.out.println("Vehicle Identification Number: " + prefixer());
+        System.out.println("Vehicle Description: " + getVehicleDescription());
+        System.out.println("Manufacturer Name: " + getManufacturerName());
+        System.out.println("Self Drive: " + isSelfDrive());
+        System.out.println("Driver: " + getDriver());
+        System.out.println("Insurance: " + isInsured());
+        System.out.println("Insurance Name Provider: " + getInsuranceNameProvider());
+        System.out.println("No of Seats: " + getNoOfSeat() + " seats");
+        System.out.println("Fuel Type: " + getFuelType());
+        System.out.println("Base Rate: " + "$" + getBaseRate());
+        System.out.println("Rate per km: " + "$" + getRatePerKm());
+    }
+
 }
+
+
