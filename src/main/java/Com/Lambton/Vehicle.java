@@ -69,6 +69,10 @@ public class Vehicle {
         return isSelfDrive;
     }
 
+    public HashMap<Integer, String> getDriver() {
+        return driver;
+    }
+
     public Boolean setSelfDrive(boolean selfDrive) {
         isSelfDrive = selfDrive;
     }
@@ -84,13 +88,7 @@ public class Vehicle {
         isSelfDrive = selfDrive;
     }
 
-    public String getDriver() {
-        return Driver;
-    }
 
-    public void setDriver(String driver) {
-        Driver = driver;
-    }
 
     public boolean isInsured() {
         return isInsured;
@@ -123,5 +121,7 @@ public class Vehicle {
     public void setFuelType(VehicleManagement.FUEL fuelType) {
         this.fuelType = fuelType;
     }
-}
+
+    
+
 }
