@@ -30,7 +30,6 @@ public class VehicleRent {
                        VehicleManagement.VEHICLETYPE vehicleType,String vehicleId, float noOfKmDrived,
                         Vehicle vehicle) {
         getCustomerName();
-        getVehicleName();
         this.rentStartDate = rentStartDate;
         this.rentEndDate = rentEndDate;
         this.vehicleId = vehicleId;
@@ -129,6 +128,8 @@ public class VehicleRent {
         stringBuilder.append("Rent Start Date: ").append(getRentStartDate()).append("\n")
                 .append("Rent End Date: ").append(getRentEndDate()).append("\n")
                 .append("Customer Name: ").append(getCustomerName()).append("\n")
+                .append("-Vehicle Name: ").append(getVehicleName()).append("\n")
+                .append("-Vehicle Type: ").append(getVehicleType()).append("\n")
                 .append("No. of Km. drived: ").append(getNoOfKmDrived() + "km").append("\n")
                 .append("Total bill to pay: $" ).append(getTotalFare());
         return String.valueOf(stringBuilder);
