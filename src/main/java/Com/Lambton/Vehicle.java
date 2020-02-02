@@ -17,8 +17,8 @@ public class Vehicle {
     public int baseRate;
     public int ratePerKm;
     public HashMap<Integer,String> vehicleDetails;
-    public Vehicle(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName, boolean isSelfDrive, boolean isInsured,
-                   int noOfSeat, VehicleManagement.FUEL fuelType) {
+    public Vehicle(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
+                   boolean isSelfDrive, boolean isInsured, int noOfSeat, VehicleManagement.FUEL fuelType) {
         this.vehicleIdentificationNumber = vehicleIdentificationNumber;
         this.vehicleDescription = vehicleDescription;
         this.manufacturerName = manufacturerName;
@@ -27,4 +27,24 @@ public class Vehicle {
         this.noOfSeat = noOfSeat;
         this.fuelType = fuelType;
     }
+    public VehicleManagement.VEHICLETYPE getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(VehicleManagement.VEHICLETYPE) {
+        this.vehicleType = vehicleType;
+    }
+
+    public HashMap<Integer, String> getDriver() {
+        return driver;
+    }
+
+    public void setDriver(HashMap<Integer, String> driver) {
+        this.driver = driver;
+    }
+
+    public long getVehicleIdentificationNumber() {
+        return vehicleIdentificationNumber;
+    }
+}
 }
