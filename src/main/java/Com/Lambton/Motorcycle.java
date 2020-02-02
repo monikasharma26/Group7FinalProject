@@ -28,5 +28,10 @@ public class Motorcycle  extends Vehicle {
     public void setMilage(float milage) {
         this.milage = milage;
     }
+
+    @Override
+    public void display() {
+    }
+    
 }
 
