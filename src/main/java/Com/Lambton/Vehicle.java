@@ -207,7 +207,7 @@ public class Vehicle implements IDisplay{
         return str;
     }
 
- 
+
     public void display()
     {
         System.out.println("Vehicle Identification Number: " + prefixer());
