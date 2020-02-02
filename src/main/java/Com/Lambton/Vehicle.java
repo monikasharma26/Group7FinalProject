@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Vehicle implements IDisplay{
+public abstract class Vehicle implements IDisplay{
     public static long vehicleIdentificationNumber;
     private String vehicleDescription;
     private String manufacturerName;
