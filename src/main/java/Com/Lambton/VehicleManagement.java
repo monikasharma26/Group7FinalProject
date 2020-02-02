@@ -8,7 +8,7 @@ public class VehicleManagement {
         Other
     }
     public enum PERSONPREFIX{
-        CO,
+        CU,
         DR,
         OW
 
