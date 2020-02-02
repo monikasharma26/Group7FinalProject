@@ -12,7 +12,13 @@ public class Motorcycle  extends Vehicle {
         super.vehicleType = VehicleManagement.VEHICLETYPE.MOTORCYCLE;
         this.topSpeed = topSpeed;
         this.milage = milage;
+    }
+    public double getTopSpeed() {
+        return topSpeed;
+    }
 
+    public void setTopSpeed(float topSpeed) {
+        this.topSpeed = topSpeed;
     }
 }
 
