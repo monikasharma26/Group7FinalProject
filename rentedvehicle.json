@@ -1,0 +1,42 @@
+[
+ {
+   "Rent Start Date": "05-20-19",
+   "Rent End Date": "05-29-19",
+   "No Of Days": 9,
+   "vehicalIdentificationNumber": "",
+   "Number Of Km Driven": 63,
+   "Total Bill": ""
+ },
+ {
+   "Rent Start Date": "09-14-19",
+   "Rent End Date": "03-13-19",
+   "No Of Days": 9,
+   "vehicalIdentificationNumber": "",
+   "Number Of Km Driven": 100,
+   "Total Bill": ""
+ },
+ {
+   "Rent Start Date": "11-24-19",
+   "Rent End Date": "11-28-19",
+   "No Of Days": 4,
+   "vehicalIdentificationNumber": "",
+   "Number Of Km Driven": 66,
+   "Total Bill": ""
+ },
+ {
+   "Rent Start Date": "01-04-20",
+   "Rent End Date": "01-31-20",
+   "No Of Days": 27,
+   "vehicalIdentificationNumber": "",
+   "Number Of Km Driven": 3,
+   "Total Bill": ""
+ },
+ {
+   "Rent Start Date": "01-20-20",
+   "Rent End Date": "01-25-20",
+   "No Of Days": 5,
+   "vehicalIdentificationNumber": "",
+   "Number Of Km Driven": 61,
+   "Total Bill": ""
+ }
+]

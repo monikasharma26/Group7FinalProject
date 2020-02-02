@@ -6,7 +6,6 @@ public class VehicleManagement {
         Male,
         Female,
         Other
-
     }
     public enum PERSONPREFIX{
         CO,
