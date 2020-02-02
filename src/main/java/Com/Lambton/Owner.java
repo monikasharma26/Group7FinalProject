@@ -60,4 +60,14 @@ public class Owner extends Person {
         str = str.concat(String.valueOf(id));
         return str;
     }
+
+    @Override
+    public void display() {
+        System.out.println("Id: " + prefixPlacing());
+        super.display();
+        System.out.println("Company Title: " + getCompanyTitle());
+        System.out.println("Business Landline Number: " + getOfficeNumber());
+        System.out.println("Website: " + getWebsite());
+        System.out.println();
+    }
 }
