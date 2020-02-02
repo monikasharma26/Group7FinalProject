@@ -32,7 +32,7 @@ public class Vehicle {
         return vehicleType;
     }
 
-    public void setVehicleType(VehicleManagement.VEHICLETYPE) {
+    public void setVehicleType(VehicleManagement.VEHICLETYPE vehicleType) {
         this.vehicleType = vehicleType;
     }
 
@@ -122,6 +122,22 @@ public class Vehicle {
         this.fuelType = fuelType;
     }
 
-    
+    public int getBaseRate() {
+        switch (vehicleType) {
+            case CAR:
+                baseRate = 100;
+                break;
+            case MOTORCYCLE:
+                baseRate = 50;
+                break;
+            case BUS:
+                baseRate = 250;
+                break;
+            default:
+                baseRate = 0;
+        }
+        return baseRate;
+    }
+
 
 }
