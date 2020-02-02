@@ -90,7 +90,7 @@ public class VehicleRent implements IDisplay {
         }
         return totalFare;
     }
-    
+
     public void display() {
         System.out.println("Rent Start Date: " + getRentStartDate());
         System.out.println("Rent End Date: " + getRentEndDate());
