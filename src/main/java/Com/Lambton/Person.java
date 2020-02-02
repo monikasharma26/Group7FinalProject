@@ -1,7 +1,7 @@
 package Com.Lambton;
 
 import java.time.LocalDate;
-
+import com.lambton.PasswordUtils;
 public abstract class Person implements  IDisplay{
 
     public int id,age;
@@ -92,6 +92,19 @@ public abstract class Person implements  IDisplay{
         this.age = today.getYear() - birthDate.getYear();
         return age;
     }
+    public String getPassword() {
+        providedPassword = password;
+        salt = PasswordUtils.getSalt(30);
+        mySecurePassword = PasswordUtils.generateSecurePassword(providedPassword, salt);
+        return mySecurePassword;
+    }
+
+    public String getOriginalPassword(){
+        VerifyProvidedPassword(providedPassword,mySecurePassword,salt);
+        return password;
+    }
+
+    //Interface Implementation
     public void display() {
         System.out.println("First Name: " + getFirstName());
         System.out.println("Last Name: " + getLastName());
@@ -101,8 +114,18 @@ public abstract class Person implements  IDisplay{
         System.out.println("Mobile Number: " + getMobileNumber());
         System.out.println("Age: " + getAge() + " years");
         System.out.println("User name: " + getUserName());
-      //  System.out.println("Password: " + getPassword());
-      //  System.out.println("Original password: " +getOriginalPassword());
+        //System.out.println("Password: " + getPassword());
+      System.out.println("Original password: " +getOriginalPassword());
+    }
+    private static void VerifyProvidedPassword(String providedPassword,String securePassword,String salt)
+    {
+        boolean passwordMatch = PasswordUtils.verifyUserPassword(providedPassword, securePassword, salt);
+        if(passwordMatch)
+        {
+            System.out.println("Provided User password " + providedPassword + " is correct.");
+        } else {
+            System.out.println("Provided password is incorrect");
+        }
     }
 }
 
