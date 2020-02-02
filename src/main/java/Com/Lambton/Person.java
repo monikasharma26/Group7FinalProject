@@ -37,11 +37,17 @@ public abstract class Person implements  IDisplay{
     }
 
     public String getFirstName() {
+
         return firstName;
     }
 
     public void setFirstName(String fName) {
-        this.firstName = fName;
+        if (firstName == null || firstName.equalsIgnoreCase("")) {
+            this.firstName = "No Name";
+        } else {
+            this.firstName = fName;
+        }
+
     }
 
     public String getLastName() {
