@@ -41,7 +41,7 @@ public class MyMain
                 "Brampton","Ont");
         c1.display();
 
-        Customer c2 = new Customer(10, "Monika ", "Sharma", "8766631257", "test@gmail.com",
+        Customer c2 = new Customer(15, "Monika ", "Sharma", "8766631257", "test@gmail.com",
                 "test", VehicleManagement.GENDER.Female, LocalDate.of(1993, 8, 12), "test123",
                 "Brampton", "Ont",new Car("G1WL52M1W1104808","HondacIty",
                 "Honda",true,false,5,VehicleManagement.FUEL.Petrol,
@@ -59,20 +59,27 @@ public class MyMain
                 "Honda",false,false,2,VehicleManagement.FUEL.Electric,34.5,
                 15.6));
 
-       VehicleRent v1=new VehicleRent(11546, LocalDate.of(2020, 01, 15),
-               LocalDate.of(2020, 01, 25), VehicleManagement.VEHICLETYPE.CAR,
-               "JHMZF1C67BS073397", 55.18f);
+       VehicleRent v1=new VehicleRent(11, LocalDate.of(2020, 01, 15),
+               LocalDate.of(2020, 01, 25), VehicleManagement.VEHICLETYPE.BUS,
+               "JHMZF1C67BS073397", 55.18f, new Bus("G1WL52M1W1104808","MiniBus",
+               "Honda",true,false,23, VehicleManagement.FUEL.Diesel,
+               VehicleManagement.BusType.MiniBus,
+               true,false));
 
         VehicleSingelton.getInstance().addToArray(c2);
         VehicleSingelton.getInstance().addToArray(c3);
        VehicleSingelton.getInstance().addToArray(c4);
-
+        VehicleSingelton.getInstance().addToRentArray(v1);
         for (Customer e: VehicleSingelton.getInstance().getArray()) {
             System.out.println(e);
             System.out.println("-----------------------------------------------------------------------------------");
-           // totalEarnings=totalEarnings+e.calcEarnings();
+
         }
-        //c2.printMyData();
+        for (VehicleRent e: VehicleSingelton.getInstance().getVehicleArrayList())       {
+            System.out.println(e);
+            System.out.println("-----------------------------------------------------------------------------------");
+
+        }
 
 
     }

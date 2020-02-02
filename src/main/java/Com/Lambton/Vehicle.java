@@ -11,7 +11,6 @@ public abstract class Vehicle implements IDisplay{
     private String manufacturerName;
     private boolean isSelfDrive;
     private boolean isInsured;
-    //public HashMap<Integer,String> driver;
     String Driver;
     private int noOfSeat;
     public String prefixDetails;
@@ -21,7 +20,6 @@ public abstract class Vehicle implements IDisplay{
     public int baseRate;
     public int ratePerKm;
     static String str;
-
     static HashMap<String, String> vehicleList = new HashMap<>();
     public Vehicle(String vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
                    boolean isSelfDrive, boolean isInsured, int noOfSeat, VehicleManagement.FUEL fuelType) {
@@ -70,13 +68,7 @@ public abstract class Vehicle implements IDisplay{
         public void setDriver(String driver) {
             Driver = driver;
         }
-  /*  public void setDriver(HashMap<Integer, String> driver) {
-        this.driver = driver;
-    }
 
-    public long getVehicleIdentificationNumber() {
-        return vehicleIdentificationNumber;
-    }*/
     public void setVehicleIdentificationNumber(String vehicleIdentificationNumber) {
         this.vehicleIdentificationNumber = vehicleIdentificationNumber;
     }

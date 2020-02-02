@@ -13,8 +13,8 @@ public class VehicleRent {
     VehicleManagement.VEHICLETYPE vehicleType;
     float noOfKmDrived;
     float totalFare;
-    int customerId;
-    String customerName;
+   static int customerId;
+    static String customerName;
     Vehicle vehicle;
     public VehicleRent(int customerId,LocalDate rentStartDate, LocalDate rentEndDate, VehicleManagement.VEHICLETYPE vehicleType, String vehicleId, float noOfKmDrived) {
         this.customerId=customerId;
@@ -23,21 +23,20 @@ public class VehicleRent {
         this.vehicleType = vehicleType;
         this.vehicleId = vehicleId;
         this.noOfKmDrived = noOfKmDrived;
+        getCustomerName();
     }
 
-    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate, long rentedDays, String vehicleId, String vehicleName,
-                       VehicleManagement.VEHICLETYPE vehicleType, float noOfKmDrived, float totalFare,
-                       int customerId, String customerName, Vehicle vehicle) {
+    public VehicleRent(int customerId,LocalDate rentStartDate, LocalDate rentEndDate,
+                       VehicleManagement.VEHICLETYPE vehicleType,String vehicleId, float noOfKmDrived,
+                        Vehicle vehicle) {
+        getCustomerName();
+        getVehicleName();
         this.rentStartDate = rentStartDate;
         this.rentEndDate = rentEndDate;
-        this.rentedDays = rentedDays;
         this.vehicleId = vehicleId;
-        this.vehicleName = vehicleName;
         this.vehicleType = vehicleType;
         this.noOfKmDrived = noOfKmDrived;
-        this.totalFare = totalFare;
         this.customerId = customerId;
-        this.customerName = customerName;
         this.vehicle = vehicle;
     }
 
@@ -49,7 +48,7 @@ public class VehicleRent {
         }
         return vehicleName;
     }
-    public String getCustomerName(){
+    public static String getCustomerName(){
         if (Customer.customerList.containsKey(String.valueOf(customerId))) {
             customerName = Customer.customerList.get(String.valueOf(customerId));
         } else {
@@ -57,6 +56,15 @@ public class VehicleRent {
         }
         return customerName;
     }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
     public VehicleManagement.VEHICLETYPE getVehicleType() {
         return vehicleType;
     }
@@ -120,8 +128,7 @@ public class VehicleRent {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Rent Start Date: ").append(getRentStartDate()).append("\n")
                 .append("Rent End Date: ").append(getRentEndDate()).append("\n")
-                .append("-Vehicle Name: ").append(getVehicleName()).append("\n")
-                .append("-Vehicle Type: ").append(getVehicleType()).append("\n")
+                .append("Customer Name: ").append(getCustomerName()).append("\n")
                 .append("No. of Km. drived: ").append(getNoOfKmDrived() + "km").append("\n")
                 .append("Total bill to pay: $" ).append(getTotalFare());
         return String.valueOf(stringBuilder);
