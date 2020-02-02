@@ -139,5 +139,21 @@ public class Vehicle {
         return baseRate;
     }
 
-
+    public int getRatePerKm() {
+        switch (vehicleType) {
+            case CAR:
+                ratePerKm = 5;
+                break;
+            case MOTORCYCLE:
+                ratePerKm = 1;
+                break;
+            case BUS:
+                ratePerKm = 7;
+                break;
+            default:
+                ratePerKm = 0;
+                break;
+        }
+        return ratePerKm;
+    }
 }
