@@ -113,8 +113,6 @@ public class Customer extends  Person
     @Override
     public String display() {
         StringBuilder stringBuilder = new StringBuilder();
-       // stringBuilder.append("Salary: ").append(getSalary())
-       //         .append("Bonus:").append(getBonus());
         return String.valueOf(stringBuilder);
     }
 

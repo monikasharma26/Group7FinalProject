@@ -3,7 +3,7 @@ package Com.Lambton;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class VehicleRent extends Vehicle{
+public class VehicleRent {
 
     LocalDate rentStartDate;
     LocalDate rentEndDate;
@@ -15,9 +15,19 @@ public class VehicleRent extends Vehicle{
     float totalFare;
     int customerId;
     String customerName;
-    public VehicleRent(String vehicleIdentificationNumber, String vehicleDescription, String manufacturerName, boolean isSelfDrive, boolean isInsured, int noOfSeat, VehicleManagement.FUEL fuelType, LocalDate rentStartDate, LocalDate rentEndDate, long rentedDays, String vehicleId, String vehicleName,
-                       VehicleManagement.VEHICLETYPE vehicleType, float noOfKmDrived, float totalFare, int customerId, String customerName) {
-        super(vehicleIdentificationNumber, vehicleDescription, manufacturerName, isSelfDrive, isInsured, noOfSeat, fuelType);
+    Vehicle vehicle;
+    public VehicleRent(int customerId,LocalDate rentStartDate, LocalDate rentEndDate, VehicleManagement.VEHICLETYPE vehicleType, String vehicleId, float noOfKmDrived) {
+        this.customerId=customerId;
+        this.rentStartDate = rentStartDate;
+        this.rentEndDate = rentEndDate;
+        this.vehicleType = vehicleType;
+        this.vehicleId = vehicleId;
+        this.noOfKmDrived = noOfKmDrived;
+    }
+
+    public VehicleRent(LocalDate rentStartDate, LocalDate rentEndDate, long rentedDays, String vehicleId, String vehicleName,
+                       VehicleManagement.VEHICLETYPE vehicleType, float noOfKmDrived, float totalFare,
+                       int customerId, String customerName, Vehicle vehicle) {
         this.rentStartDate = rentStartDate;
         this.rentEndDate = rentEndDate;
         this.rentedDays = rentedDays;
@@ -25,7 +35,10 @@ public class VehicleRent extends Vehicle{
         this.vehicleName = vehicleName;
         this.vehicleType = vehicleType;
         this.noOfKmDrived = noOfKmDrived;
-
+        this.totalFare = totalFare;
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.vehicle = vehicle;
     }
 
     public String getVehicleName() {
@@ -96,19 +109,10 @@ public class VehicleRent extends Vehicle{
         this.totalFare = totalFare;
     }*/
 
-    @Override
     public String display() {
 
-
-        System.out.println("Rent Start Date: " + getRentStartDate());
-        System.out.println("Rent End Date: " + getRentEndDate());
-        System.out.println("Rented No. of days: " + getRentedDays());
-        System.out.println("Vehicle: " + getVehicleName());
-        System.out.println("Vehicle Type: " + getVehicleType());
-        System.out.println("No. of Km. drived: " + getNoOfKmDrived() + "km");
-        System.out.println("Total bill to pay: $" + getTotalFare());
-
-        return toString();
+        StringBuilder stringBuilder = new StringBuilder();
+        return String.valueOf(stringBuilder);
     }
 
     @Override

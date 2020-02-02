@@ -58,10 +58,15 @@ public class MyMain
                 "Brampton", "Ont",new Motorcycle("G1WL52M1W110334","MotoroCycle",
                 "Honda",false,false,2,VehicleManagement.FUEL.Electric,34.5,
                 15.6));
-      //  VehicleRent v4=
+
+       VehicleRent v1=new VehicleRent(11546, LocalDate.of(2020, 01, 15),
+               LocalDate.of(2020, 01, 25), VehicleManagement.VEHICLETYPE.CAR,
+               "JHMZF1C67BS073397", 55.18f);
+
         VehicleSingelton.getInstance().addToArray(c2);
         VehicleSingelton.getInstance().addToArray(c3);
        VehicleSingelton.getInstance().addToArray(c4);
+
         for (Customer e: VehicleSingelton.getInstance().getArray()) {
             System.out.println(e);
             System.out.println("-----------------------------------------------------------------------------------");
