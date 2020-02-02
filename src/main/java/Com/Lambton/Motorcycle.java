@@ -31,7 +31,8 @@ public class Motorcycle  extends Vehicle {
 
     @Override
     public void display() {
+        super.display();
     }
-    
+
 }
 
