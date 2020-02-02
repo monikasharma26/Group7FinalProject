@@ -68,4 +68,26 @@ public class VehicleRent {
     public void setNoOfKmDrived(float noOfKmDrived) {
         this.noOfKmDrived = noOfKmDrived;
     }
+
+    public float getTotalFare() {
+
+        switch (vehicleType) {
+            case CAR: {
+                totalFare = 100 * getRentedDays() + (getNoOfKmDrived() * 5);
+                break;
+            }
+            case MOTORCYCLE: {
+                totalFare = 50 * getRentedDays() + (getNoOfKmDrived() * 1);
+                break;
+            }
+            case BUS: {
+                totalFare = 250 * getRentedDays() + (getNoOfKmDrived() * 7);
+                break;
+            }
+            default:
+                totalFare = 0;
+                break;
+        }
+        return totalFare;
+    }
 }
