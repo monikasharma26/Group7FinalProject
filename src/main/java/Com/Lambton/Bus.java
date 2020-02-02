@@ -46,7 +46,7 @@ public class Bus extends Vehicle implements IDisplay {
     public void setWifiAvailable(boolean wifiAvailable) {
         isWifiAvailable = wifiAvailable;
     }
-    
+
     public void display() {
         super.display();
         System.out.println("Bus Type: " + getTypeOfBus());

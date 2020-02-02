@@ -66,7 +66,7 @@ public abstract class Person implements  IDisplay{
         } else {
             this.lastName = lName;
         }
-     
+
     }
 
     public String getMobileNumber() {
@@ -117,16 +117,16 @@ public abstract class Person implements  IDisplay{
 
     //Interface Implementation
     public void display() {
-        System.out.println("First Name: " + getFirstName());
-        System.out.println("Last Name: " + getLastName());
-        System.out.println("Gender: " + getGender());
-        System.out.println("Birth Date: " + getBirthDate());
-        System.out.println("Email: " + getEmailId());
-        System.out.println("Mobile Number: " + getMobileNumber());
-        System.out.println("Age: " + getAge() + " years");
-        System.out.println("User name: " + getUserName());
+        System.out.println("Full Name: " + getFirstName().concat(getLastName()) + "");
+     //   System.out.println("Last Name: " + getLastName());
+        System.out.println("Gender: " + getGender() +"");
+        System.out.println("Year of Birth: " + getAge() +"");
+        System.out.println("Email: " + getEmailId()+"");
+        System.out.println("Mobile Number: " + getMobileNumber()+"");
+     //   System.out.println("Age: " + getAge() + " years");
+        System.out.println("User name: " + getUserName()+"");
        // System.out.println("Password: " + getPassword());
-      System.out.println("Original password: " +getOriginalPassword());
+      System.out.println("Original password: " +getOriginalPassword() +"");
     }
     private static void VerifyProvidedPassword(String providedPassword,String securePassword,String salt)
     {
