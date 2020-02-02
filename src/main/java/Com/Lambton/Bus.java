@@ -23,11 +23,11 @@ public class Bus extends Vehicle implements IDisplay {
         this.isWifiAvailable = isWifiAvailable;
     }
 
-    public BusType getTypeOfBus() {
+    public VehicleManagement.BusType getTypeOfBus() {
         return typeOfBus;
     }
 
-    public void setTypeOfBus(BusType typeOfBus) {
+    public void setTypeOfBus(VehicleManagement.BusType typeOfBus) {
         this.typeOfBus = typeOfBus;
     }
 
@@ -46,7 +46,7 @@ public class Bus extends Vehicle implements IDisplay {
     public void setWifiAvailable(boolean wifiAvailable) {
         isWifiAvailable = wifiAvailable;
     }
-
+    
     public void display() {
         super.display();
         System.out.println("Bus Type: " + getTypeOfBus());
