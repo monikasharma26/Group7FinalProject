@@ -32,6 +32,12 @@ public class VehicleManagement {
         Coupe,
         Convertible
     }
+    public enum BusType {
+        MiniBus,
+        Volvo,
+        DoubleDecker,
+        MiniCoach
+    }
 
 
 
