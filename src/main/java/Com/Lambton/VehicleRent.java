@@ -19,4 +19,22 @@ public class VehicleRent {
         this.vehicleId = vehicleId;
         this.noOfKmDrived = noOfKmDrived;
     }
+    public String getVehicleName() {
+        if (Vehicle.vehicleList.containsKey(String.valueOf(vehicleId))) {
+//            System.out.println("if block");
+            vehicleName = Vehicle.vehicleList.get(String.valueOf(vehicleId));
+        } else {
+//            System.out.println("else block");
+            vehicleName = "Invalid Vehicle Entry";
+        }
+        return vehicleName;
+    }
+
+    public VehicleManagement.VEHICLETYPE getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(VehicleManagement.VEHICLETYPE vehicleType) {
+        this.vehicleType = vehicleType;
+    }
 }
