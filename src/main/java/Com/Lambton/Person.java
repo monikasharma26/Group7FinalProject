@@ -99,6 +99,7 @@ public abstract class Person implements  IDisplay{
     }
 
     public String getOriginalPassword(){
+        getPassword();
         VerifyProvidedPassword(providedPassword,mySecurePassword,salt);
         return password;
     }
@@ -113,7 +114,7 @@ public abstract class Person implements  IDisplay{
         System.out.println("Mobile Number: " + getMobileNumber());
         System.out.println("Age: " + getAge() + " years");
         System.out.println("User name: " + getUserName());
-        //System.out.println("Password: " + getPassword());
+       // System.out.println("Password: " + getPassword());
       System.out.println("Original password: " +getOriginalPassword());
     }
     private static void VerifyProvidedPassword(String providedPassword,String securePassword,String salt)
@@ -121,9 +122,11 @@ public abstract class Person implements  IDisplay{
         boolean passwordMatch = PasswordUtils.verifyUserPassword(providedPassword, securePassword, salt);
         if(passwordMatch)
         {
-            System.out.println("Provided User password " + providedPassword + " is correct.");
+            passwordMatch=true;
+          //  System.out.println("Provided User password " + providedPassword + " is correct.");
         } else {
-            System.out.println("Provided password is incorrect");
+           // System.out.println("Provided password is incorrect");
+            passwordMatch=false;
         }
     }
 }
