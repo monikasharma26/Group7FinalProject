@@ -1,7 +1,7 @@
 package Com.Lambton;
 
 import java.time.LocalDate;
-import com.lambton.PasswordUtils;
+
 public abstract class Person implements  IDisplay{
 
     public int id,age;
@@ -14,11 +14,10 @@ public abstract class Person implements  IDisplay{
     String salt;
     public String prefixDetails;
     String str;
-    public Person(int id, int age, String firstName, String lastName,
+    public Person(int id, String firstName, String lastName,
                   String mobileNumber, String emailId, String userName, VehicleManagement.GENDER gender,
                   LocalDate birthDate, String password) {
         this.id = id;
-        this.age = age;
         this.firstName = firstName;
         this.lastName = lastName;
         this.mobileNumber = mobileNumber;
