@@ -17,7 +17,8 @@ public class PdfGenerator {
                         OutputStream file = new FileOutputStream(new File("VehicleRent_Details.pdf"));
                         Document document = new Document();
                         PdfWriter.getInstance(document, file);
-
+                        VehicleRent rent= new VehicleRent();
+                        Float s=rent.getTotalFare();
                         PdfPTable table = new PdfPTable(1);
                         PdfPCell cell = new PdfPCell(new Paragraph("Vehicle Rent Details"));
                         cell.setColspan(6);
@@ -29,7 +30,7 @@ public class PdfGenerator {
                         for (Customer v: VehicleSingelton.getInstance().getArray()) {
                                 table.addCell(v.toString());
                         }
-                        table.addCell("Total Bill "+String.valueOf(VehicleSingelton.getInstance().getTotalBill()));
+                        table.addCell("Total Bill "+s);
                         table.setSpacingBefore(50.0f);
                         table.setSpacingAfter(50.0f);
                         document.open();

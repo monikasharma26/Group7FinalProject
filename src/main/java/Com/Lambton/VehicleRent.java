@@ -3,20 +3,25 @@ package Com.Lambton;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class VehicleRent {
+public  class VehicleRent {
 
-    LocalDate rentStartDate;
-    LocalDate rentEndDate;
-    long rentedDays;
-    String vehicleId;
-    String vehicleName;
-    VehicleManagement.VEHICLETYPE vehicleType;
-    float noOfKmDrived;
-    float totalFare;
+    static LocalDate rentStartDate;
+    static LocalDate rentEndDate;
+    public static  float TotalAmount;
+    static long rentedDays;
+    static String vehicleId;
+    static String vehicleName;
+    static VehicleManagement.VEHICLETYPE vehicleType;
+    static float noOfKmDrived;
+    static float totalFare;
    static int customerId;
     static String customerName;
     Vehicle vehicle;
-    public VehicleRent(int customerId,LocalDate rentStartDate, LocalDate rentEndDate, VehicleManagement.VEHICLETYPE vehicleType, String vehicleId, float noOfKmDrived) {
+
+    public VehicleRent() {
+    }
+
+    public VehicleRent(int customerId, LocalDate rentStartDate, LocalDate rentEndDate, VehicleManagement.VEHICLETYPE vehicleType, String vehicleId, float noOfKmDrived) {
         this.customerId=customerId;
         this.rentStartDate = rentStartDate;
         this.rentEndDate = rentEndDate;
@@ -67,43 +72,46 @@ public class VehicleRent {
     public VehicleManagement.VEHICLETYPE getVehicleType() {
         return vehicleType;
     }
-    public void setVehicleType(VehicleManagement.VEHICLETYPE vehicleType) {
-        this.vehicleType = vehicleType;
+    public static void setVehicleType(VehicleManagement.VEHICLETYPE vehicleType) {
+        vehicleType = vehicleType;
     }
-    public LocalDate getRentStartDate() {
+    public static LocalDate getRentStartDate() {
         return rentStartDate;
     }
-    public void setRentStartDate(LocalDate rentStartDate) {
-        this.rentStartDate = rentStartDate;
+    public static void setRentStartDate(LocalDate rentStartDate) {
+        rentStartDate = rentStartDate;
     }
-    public LocalDate getRentEndDate() {
+    public static LocalDate getRentEndDate() {
         return rentEndDate;
     }
     public void setRentEndDate(LocalDate rentEndDate) {
         this.rentEndDate = rentEndDate;
     }
-    public long getRentedDays() {
+    public static long getRentedDays() {
         rentedDays = getRentStartDate().until(getRentEndDate(), ChronoUnit.DAYS);
         return rentedDays;
     }
-    public float getNoOfKmDrived() {
+    public static float getNoOfKmDrived() {
         return noOfKmDrived;
     }
     public void setNoOfKmDrived(float noOfKmDrived) {
         this.noOfKmDrived = noOfKmDrived;
     }
-    public float getTotalFare() {
+    public static float getTotalFare() {
         switch (vehicleType) {
             case CAR: {
                 totalFare = 100 * getRentedDays() + (getNoOfKmDrived() * 5);
+                TotalAmount=totalFare;
                 break;
             }
             case MOTORCYCLE: {
                 totalFare = 50 * getRentedDays() + (getNoOfKmDrived() * 1);
+                TotalAmount=totalFare;
                 break;
             }
             case BUS: {
                 totalFare = 250 * getRentedDays() + (getNoOfKmDrived() * 7);
+                TotalAmount=totalFare;
                 break;
             }
             default:
@@ -115,7 +123,9 @@ public class VehicleRent {
 /*    public void setTotalFare(float totalFare) {
         this.totalFare = totalFare;
     }*/
+public static void TotalAmount(){
 
+}
     public String display() {
 
         StringBuilder stringBuilder = new StringBuilder();
