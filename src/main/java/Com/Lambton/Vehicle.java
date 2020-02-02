@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Vehicle {
-    public long vehicleIdentificationNumber;
+    public static long vehicleIdentificationNumber;
     private String vehicleDescription;
     private String manufacturerName;
     private boolean isSelfDrive;
@@ -14,9 +14,10 @@ public class Vehicle {
     public String prefixDetails;
     private String insuranceProviderName;
     private VehicleManagement.FUEL fuelType;
-    private VehicleManagement.VEHICLETYPE vehicleType;
+    private static VehicleManagement.VEHICLETYPE vehicleType;
     public int baseRate;
     public int ratePerKm;
+    static String str;
     static HashMap<String, String> vehicleList = new HashMap<>();
     public Vehicle(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
                    boolean isSelfDrive, boolean isInsured, int noOfSeat, VehicleManagement.FUEL fuelType) {
@@ -75,6 +76,7 @@ public class Vehicle {
 
     public Boolean setSelfDrive(boolean selfDrive) {
         isSelfDrive = selfDrive;
+        return isSelfDrive;
     }
 
     public static HashMap<String, String> getVehicleList() {
@@ -84,12 +86,6 @@ public class Vehicle {
         }
         return null;
     }
-    public boolean setSelfDrive(boolean selfDrive) {
-        isSelfDrive = selfDrive;
-    }
-
-
-
     public boolean isInsured() {
         return isInsured;
     }
@@ -155,5 +151,29 @@ public class Vehicle {
                 break;
         }
         return ratePerKm;
+    }
+
+    public static String prefixer() {
+        switch (vehicleType) {
+            case CAR: {
+                str = new String(String.valueOf(VehicleManagement.VEHICLETYPE.CAR+"_"));
+                str = str.concat(String.valueOf(vehicleIdentificationNumber));
+                break;
+            }
+            case MOTORCYCLE: {
+                str = new String(String.valueOf(VehicleManagement.VEHICLETYPE.MOTORCYCLE+"_"));
+                str = str.concat(String.valueOf(vehicleIdentificationNumber));
+                break;
+            }
+            case BUS: {
+                str = new String(String.valueOf(VehicleManagement.VEHICLETYPE.BUS+"_"));
+                str = str.concat(String.valueOf(vehicleIdentificationNumber));
+                break;
+            }
+            default:
+                str = null;
+                break;
+        }
+        return str;
     }
 }
