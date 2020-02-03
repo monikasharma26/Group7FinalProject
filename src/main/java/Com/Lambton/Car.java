@@ -1,4 +1,5 @@
 package Com.Lambton;
 
-public class Car {
+public class Car extends Vehicle implements IDisplay{
+
 }
