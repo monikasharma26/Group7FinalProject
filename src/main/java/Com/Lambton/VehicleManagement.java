@@ -18,6 +18,9 @@ public class VehicleManagement {
           Electric
 
     }
+    public enum VEHICLETYPE{
+        
+    }
 
 
 }
