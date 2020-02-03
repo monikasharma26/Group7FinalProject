@@ -14,7 +14,10 @@ public class PdfGenerator {
 
         public void PdfGenrator() {
                 try {
-                       
+                        OutputStream file = new FileOutputStream(new File("VehicleRent_Details.pdf"));
+                        Document document = new Document();
+                        PdfWriter.getInstance(document, file);
+                        
 
                 } catch (Exception e) {
                         e.printStackTrace();
