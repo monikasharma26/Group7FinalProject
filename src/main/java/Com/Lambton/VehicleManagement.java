@@ -9,7 +9,10 @@ public class VehicleManagement {
 
     }
     public enum PERSONPREFIX{
-        
+        CO,
+        MOT,
+        BUS
+
     }
 
 
