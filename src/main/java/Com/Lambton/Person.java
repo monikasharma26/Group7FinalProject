@@ -8,5 +8,7 @@ public class Person {
     public String firstName,lastName,mobileNumber,emailId,userName;
     public VehicleManagement.GENDER gender;
     LocalDate birthDate;
+    public String password;
+    
 
 }
