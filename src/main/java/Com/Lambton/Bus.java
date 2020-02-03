@@ -41,5 +41,12 @@ public class Bus extends Vehicle implements IDisplay {
         isAccessibilityServiceAvailable = accessibilityServiceAvailable;
     }
 
+    public boolean isWifiAvailable() {
+        return isWifiAvailable;
+    }
+
+    public void setWifiAvailable(boolean wifiAvailable) {
+        isWifiAvailable = wifiAvailable;
+    }
 
 }
