@@ -35,5 +35,14 @@ public class Car extends Vehicle implements IDisplay{
         this.carColor = carColor;
     }
 
+    public void display() {
+        super.display();
+        super.display();
+        System.out.println("Car Type: " + getCarType());
+        System.out.println("Car Color: " + getCarColor());
+        System.out.println();
+
+    }
+
 
 }
