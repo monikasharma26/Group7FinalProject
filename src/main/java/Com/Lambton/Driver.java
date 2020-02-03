@@ -21,4 +21,8 @@ public class Driver extends Person implements IDisplay {
         return licenceNumber;
     }
 
+    public void setLicenceNumber(long licenceNumber) {
+        this.licenceNumber = licenceNumber;
+    }
+
 }
