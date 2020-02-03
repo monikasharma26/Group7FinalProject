@@ -14,5 +14,16 @@ public class Person {
     String salt;
     public String prefixDetails;
 
-
+    public Person(int id, int age, String firstName, String lastName, String mobileNumber, String emailId, String userName, VehicleManagement.GENDER gender, LocalDate birthDate, String password) {
+        this.id = id;
+        this.age = age;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobileNumber = mobileNumber;
+        this.emailId = emailId;
+        this.userName = userName;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.password = password;
+    }
 }
