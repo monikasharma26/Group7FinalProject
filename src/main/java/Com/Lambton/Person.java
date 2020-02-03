@@ -4,16 +4,20 @@ import java.time.LocalDate;
 
 public abstract class Person implements IDisplay{
 
-    public int id,age;
-    public String firstName,lastName,mobileNumber,emailId,userName;
-    public VehicleManagement.GENDER gender;
-    LocalDate birthDate;
-    public String password;
-    String providedPassword;
-    String mySecurePassword;
-    String salt;
+    public int id;
+    private int age;
+    private String firstName,lastName,mobileNumber,emailId,userName;
+    private VehicleManagement.GENDER gender;
+    private LocalDate birthDate;
+    private String password;
+    private String providedPassword;
+    private String mySecurePassword;
+    private String salt;
     public String prefixDetails;
-    String str;
+    public String str;
+    private String fullName;
+    private Vehicle vehicle;
+   // abstract Double calcEarnings();
     public Person(int id, String firstName, String lastName,
                   String mobileNumber, String emailId, String userName, VehicleManagement.GENDER gender,
                   LocalDate birthDate, String password) {
@@ -28,8 +32,36 @@ public abstract class Person implements IDisplay{
         this.password = password;
     }
 
+    public Person(int id, String firstName, String lastName, String mobileNumber, String emailId, String userName,
+                  VehicleManagement.GENDER gender, LocalDate birthDate, String password, Vehicle vehicle) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobileNumber = mobileNumber;
+        this.emailId = emailId;
+        this.userName = userName;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.password = password;
+        this.providedPassword = providedPassword;
+        this.vehicle = vehicle;
+    }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
     public int getId() {
         return id;
+    }
+
+    public String getFullName()
+    {
+        fullName=getFirstName().concat(getLastName());
+        return fullName;
     }
 
     public void setId(int id) {
@@ -97,7 +129,7 @@ public abstract class Person implements IDisplay{
         this.userName = userName;
     }
 
-    private int getAge() {
+    public int getAge() {
         LocalDate today = LocalDate.now();
         this.age = today.getYear() - birthDate.getYear();
         return age;
@@ -116,7 +148,7 @@ public abstract class Person implements IDisplay{
     }
 
     //Interface Implementation
-    public void display() {
+    public String display() {
         System.out.println("Full Name: " + getFirstName().concat(getLastName()) + "");
      //   System.out.println("Last Name: " + getLastName());
         System.out.println("Gender: " + getGender() +"");
@@ -127,6 +159,7 @@ public abstract class Person implements IDisplay{
         System.out.println("User name: " + getUserName()+"");
        // System.out.println("Password: " + getPassword());
       System.out.println("Original password: " +getOriginalPassword() +"");
+      return toString();
     }
     private static void VerifyProvidedPassword(String providedPassword,String securePassword,String salt)
     {

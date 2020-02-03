@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class VehicleSingelton {
 
     private static VehicleSingelton ourInstance;
-    private ArrayList<VehicleRent> vehicleRentArrayList= null;
+    private ArrayList<Customer> vehicleRentArrayList= null;
     private double totalBill;
 
     public static VehicleSingelton getInstance() {
@@ -19,12 +19,12 @@ public class VehicleSingelton {
         vehicleRentArrayList= new ArrayList<>();
     }
 
-    public ArrayList<VehicleRent> getArray() {
+    public ArrayList<Customer> getArray() {
         return this.vehicleRentArrayList;
     }
     //Add element to array
 
-    public void addToArray(VehicleRent vehicleRent) {
+    public void addToArray(Customer vehicleRent) {
         vehicleRentArrayList.add(vehicleRent);
     }
 

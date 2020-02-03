@@ -41,6 +41,34 @@ public class MyMain
                 "Brampton","Ont");
         c1.display();
 
+        Customer c2 = new Customer(10, "Monika ", "Sharma", "8766631257", "test@gmail.com",
+                "test", VehicleManagement.GENDER.Female, LocalDate.of(1993, 8, 12), "test123",
+                "Brampton", "Ont",new Car("G1WL52M1W1104808","HondacIty",
+                "Honda",true,false,5,VehicleManagement.FUEL.Petrol,
+                VehicleManagement.CarType.Sedan,"RED"));
+        Customer c3 = new Customer(11, "Anmol", "Singh","8766631257", "test@gmail.com",
+                "test", VehicleManagement.GENDER.Female, LocalDate.of(1993, 8, 12), "test123",
+                "Brampton", "Ont",new Bus("G1WL52M1W1104808","MiniBus",
+                "Honda",true,false,23, VehicleManagement.FUEL.Diesel,
+                VehicleManagement.BusType.MiniBus,
+                true,false));
+
+       Customer c4 = new Customer(12, "Anmol", "Singh","8766631257", "test@gmail.com",
+                "test", VehicleManagement.GENDER.Female, LocalDate.of(1993, 8, 12), "test123",
+                "Brampton", "Ont",new Motorcycle("G1WL52M1W110334","MotoroCycle",
+                "Honda",false,false,2,VehicleManagement.FUEL.Electric,34.5,
+                15.6));
+      //  VehicleRent v4=
+        VehicleSingelton.getInstance().addToArray(c2);
+        VehicleSingelton.getInstance().addToArray(c3);
+       VehicleSingelton.getInstance().addToArray(c4);
+        for (Customer e: VehicleSingelton.getInstance().getArray()) {
+            System.out.println(e);
+            System.out.println("-----------------------------------------------------------------------------------");
+           // totalEarnings=totalEarnings+e.calcEarnings();
+        }
+        //c2.printMyData();
+
 
     }
 

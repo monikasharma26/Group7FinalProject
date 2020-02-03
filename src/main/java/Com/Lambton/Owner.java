@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Owner extends Person implements IDisplay {
+public class Owner extends Person {
 
     String companyTitle;
     String officeNumber;
@@ -62,12 +62,13 @@ public class Owner extends Person implements IDisplay {
     }
 
     @Override
-    public void display() {
+    public String display() {
         System.out.println("Id: " + prefixPlacing());
         super.display();
         System.out.println("Company Title: " + getCompanyTitle());
         System.out.println("Business Landline Number: " + getOfficeNumber());
         System.out.println("Website: " + getWebsite());
         System.out.println();
+        return toString();
     }
 }

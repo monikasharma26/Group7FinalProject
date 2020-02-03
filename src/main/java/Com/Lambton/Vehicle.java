@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public abstract class Vehicle implements IDisplay{
 
-    public static long vehicleIdentificationNumber;
+    public static String vehicleIdentificationNumber;
     private String vehicleDescription;
     private String manufacturerName;
     private boolean isSelfDrive;
@@ -23,7 +23,7 @@ public abstract class Vehicle implements IDisplay{
     static String str;
 
     static HashMap<String, String> vehicleList = new HashMap<>();
-    public Vehicle(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
+    public Vehicle(String vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
                    boolean isSelfDrive, boolean isInsured, int noOfSeat, VehicleManagement.FUEL fuelType) {
         this.vehicleIdentificationNumber = vehicleIdentificationNumber;
         this.vehicleDescription = vehicleDescription;
@@ -77,7 +77,7 @@ public abstract class Vehicle implements IDisplay{
     public long getVehicleIdentificationNumber() {
         return vehicleIdentificationNumber;
     }*/
-    public void setVehicleIdentificationNumber(long vehicleIdentificationNumber) {
+    public void setVehicleIdentificationNumber(String vehicleIdentificationNumber) {
         this.vehicleIdentificationNumber = vehicleIdentificationNumber;
     }
 
@@ -210,7 +210,7 @@ public abstract class Vehicle implements IDisplay{
     }
 
 
-    public void display()
+    public String display()
     {
         System.out.println("Vehicle Identification Number: " + prefixer());
         System.out.println("Vehicle Description: " + getVehicleDescription());
@@ -223,6 +223,7 @@ public abstract class Vehicle implements IDisplay{
         System.out.println("Fuel Type: " + getFuelType());
         System.out.println("Base Rate: " + "$" + getBaseRate());
         System.out.println("Rate per km: " + "$" + getRatePerKm());
+        return toString();
     }
 
 }
