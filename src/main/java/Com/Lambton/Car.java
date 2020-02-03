@@ -35,6 +35,7 @@ public class Car extends Vehicle implements IDisplay{
         this.carColor = carColor;
     }
 
+    @Override
     public void display() {
         super.display();
         super.display();
