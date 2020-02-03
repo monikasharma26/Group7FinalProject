@@ -12,6 +12,9 @@ public class VehicleManagement {
          DR,
          OW
     }
+    public enum FUEL{
+        
+    }
 
 
 }
