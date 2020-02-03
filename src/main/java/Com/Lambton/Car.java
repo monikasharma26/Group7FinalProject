@@ -14,7 +14,7 @@ public class Car extends Vehicle implements IDisplay{
         super(vehicleIdentificationNumber, vehicleDescription, manufacturerName,
                 isSelfDrive, /*driver,*/ isInsured, /*insuranceNameProvider,*/
                 noOfSeat, fuelType/*, vehicleType, baseRate, ratePerKm*/);
-        super.vehicleType = Type.Car;
+        super.vehicleType = VehicleManagement.VEHICLETYPE.BUS;
         this.carType = carType;
         this.carColor = carColor;
     }
