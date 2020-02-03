@@ -24,6 +24,9 @@ public class VehicleManagement {
         Diesel,
         Electric
     }
+    public enum CarType{
+        
+    }
 
 
 
