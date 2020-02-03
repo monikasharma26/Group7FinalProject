@@ -11,6 +11,8 @@ public class Person {
     public String password;
     String providedPassword;
     String mySecurePassword;
-    
+    String salt;
+    public String prefixDetails;
+
 
 }
