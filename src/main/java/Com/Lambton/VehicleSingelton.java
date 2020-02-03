@@ -15,5 +15,10 @@ public class VehicleSingelton {
         return ourInstance;
     }
 
+    private VehicleSingelton() {
+        vehicleRentArrayList= new ArrayList<>();
+    }
+
+
 }
 
