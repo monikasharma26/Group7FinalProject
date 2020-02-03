@@ -56,7 +56,8 @@ public class Bus extends Vehicle implements IDisplay {
     }
 
     public void display() {
-      
+        super.display();
+
     }
 
 }
