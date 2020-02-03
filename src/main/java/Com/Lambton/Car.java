@@ -31,5 +31,9 @@ public class Car extends Vehicle implements IDisplay{
         return carColor;
     }
 
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
+    }
+
 
 }
