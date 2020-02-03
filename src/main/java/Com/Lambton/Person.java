@@ -55,6 +55,9 @@ public class Person {
     public String getMobileNumber() {
         return mobileNumber;
     }
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
     
 
     }
