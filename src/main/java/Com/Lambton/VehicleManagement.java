@@ -20,7 +20,9 @@ public class VehicleManagement {
         BUS
     }
     public enum FUEL{
-        
+        Petrol,
+        Diesel,
+        Electric
     }
 
 
