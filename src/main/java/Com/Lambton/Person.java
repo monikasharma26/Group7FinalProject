@@ -52,6 +52,9 @@ public class Person {
     public void setLastName(String lName) {
         this.lastName= lName;
     }
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
     
 
     }
