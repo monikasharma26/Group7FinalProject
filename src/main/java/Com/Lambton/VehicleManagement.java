@@ -23,6 +23,9 @@ public class VehicleManagement {
         MOT,
         BUS
     }
+    public enum CarType{
+        
+    }
 
 
 }
