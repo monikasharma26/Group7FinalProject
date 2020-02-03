@@ -9,6 +9,8 @@ public class Person {
     public VehicleManagement.GENDER gender;
     LocalDate birthDate;
     public String password;
+    String providedPassword;
+    String mySecurePassword;
     
 
 }
