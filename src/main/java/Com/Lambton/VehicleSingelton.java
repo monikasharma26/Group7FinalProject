@@ -28,7 +28,10 @@ public class VehicleSingelton {
         vehicleRentArrayList.add(vehicleRent);
     }
 
-  
+    public double getTotalPayroll() {
+        return totalBill;
+    }
+
 
 }
 
