@@ -19,7 +19,9 @@ public class VehicleManagement {
 
     }
     public enum VEHICLETYPE{
-        
+        CAR,
+        MOT,
+        BUS
     }
 
 
