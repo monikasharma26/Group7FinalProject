@@ -7,5 +7,9 @@ public class VehicleManagement {
         Other
 
     }
+    public enum PERSONPREFIX{
+        
+    }
+
 
 }
