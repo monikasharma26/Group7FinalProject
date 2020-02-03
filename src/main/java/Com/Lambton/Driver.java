@@ -48,7 +48,10 @@ public class Driver extends Person implements IDisplay {
     }
 
     public String prefixPlacing() {
-        
+        str = new String(String.valueOf(prefix.DRI) + "_");
+        str = str.concat(String.valueOf(id));
+        return str;
+    }
 
 }
 
