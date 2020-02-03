@@ -19,4 +19,8 @@ public class Car extends Vehicle implements IDisplay{
         this.carColor = carColor;
     }
 
+    public VehicleManagement.CarType getCarType() {
+        return carType;
+    }
+
 }
