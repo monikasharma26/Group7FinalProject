@@ -25,7 +25,13 @@ public class VehicleManagement {
         Electric
     }
     public enum CarType{
-        
+        Hatchback,
+        Sedan,
+        MPV,
+        SUV,
+        Crossover,
+        Coupe,
+        Convertible
     }
 
 
