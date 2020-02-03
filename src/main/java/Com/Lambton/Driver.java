@@ -32,6 +32,7 @@ public class Driver extends Person implements IDisplay {
         } else {
             status = "Unclear";
         }
+        return status;
     }
 
     public void setDrivingHistoryCleared(boolean drivingHistoryCleared) {
