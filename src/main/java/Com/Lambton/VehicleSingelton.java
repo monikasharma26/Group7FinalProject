@@ -19,6 +19,11 @@ public class VehicleSingelton {
         vehicleRentArrayList= new ArrayList<>();
     }
 
+    public ArrayList<VehicleRent> getArray() {
+        return this.vehicleRentArrayList;
+    }
+    //Add element to array
+   
 
 }
 
