@@ -35,6 +35,10 @@ public class Driver extends Person implements IDisplay {
         return status;
     }
 
+    public Double getSalary() {
+        return salary;
+    }
+    
     public void setDrivingHistoryCleared(boolean drivingHistoryCleared) {
         isDrivingHistoryCleared = drivingHistoryCleared;
     }
