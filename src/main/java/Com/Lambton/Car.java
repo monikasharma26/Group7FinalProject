@@ -23,4 +23,9 @@ public class Car extends Vehicle implements IDisplay{
         return carType;
     }
 
+    public void setCarType(VehicleManagement.CarType carType) {
+        this.carType = carType;
+    }
+
+
 }
