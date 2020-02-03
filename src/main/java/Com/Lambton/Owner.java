@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Owner extends Person {
+public class Owner extends Person implements IDisplay {
 
     String companyTitle;
     String officeNumber;
