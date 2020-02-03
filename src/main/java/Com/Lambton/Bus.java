@@ -1,4 +1,14 @@
 package Com.Lambton;
 
-public class Bus {
+import java.lang.reflect.Type;
+
+public class Bus extends Vehicle implements IDisplay {
+
+
+    BusType typeOfBus;
+    boolean isAccessibilityServiceAvailable;
+    boolean isWifiAvailable;
+
+
+
 }
