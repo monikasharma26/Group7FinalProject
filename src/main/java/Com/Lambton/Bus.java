@@ -33,4 +33,13 @@ public class Bus extends Vehicle implements IDisplay {
         this.typeOfBus = typeOfBus;
     }
 
+    public boolean isAccessibilityServiceAvailable() {
+        return isAccessibilityServiceAvailable;
+    }
+
+    public void setAccessibilityServiceAvailable(boolean accessibilityServiceAvailable) {
+        isAccessibilityServiceAvailable = accessibilityServiceAvailable;
+    }
+
+
 }
