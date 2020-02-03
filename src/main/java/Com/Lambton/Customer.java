@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Customer extends  Person implements IDisplay
-    
+
 {
     String address;
     String city;
