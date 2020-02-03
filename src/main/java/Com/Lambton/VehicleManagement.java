@@ -15,7 +15,7 @@ public class VehicleManagement {
     }
     public enum VEHICLETYPE{
         CAR,
-        MOT,
+        MOTORCYCLE,
         BUS
     }
     public enum FUEL{
