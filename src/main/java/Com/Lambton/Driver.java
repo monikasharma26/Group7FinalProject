@@ -47,6 +47,11 @@ public class Driver extends Person implements IDisplay {
         this.salary = salary;
     }
 
+    public void display() {
+      
+
+    }
+
     public String prefixPlacing() {
         str = new String(String.valueOf(prefix.DRI) + "_");
         str = str.concat(String.valueOf(id));
