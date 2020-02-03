@@ -26,4 +26,19 @@ public class Person {
         this.birthDate = birthDate;
         this.password = password;
     }
+
+    public int getId() {
+        return id;
+    }
+    
+
+
+
+
+
+
+
+
+
+
 }
