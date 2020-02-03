@@ -47,6 +47,7 @@ public class Driver extends Person implements IDisplay {
         this.salary = salary;
     }
 
+    @Override
     public void display() {
         System.out.println("Id: " + prefixPlacing());
         super.display();
