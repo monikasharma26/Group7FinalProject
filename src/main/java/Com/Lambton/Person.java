@@ -58,9 +58,11 @@ public class Person {
     public LocalDate getBirthDate() {
         return birthDate;
     }
-    
 
+    public VehicleManagement.GENDER getGender() {
+        return gender;
     }
+}
 
 
 
