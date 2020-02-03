@@ -50,7 +50,10 @@ public class Driver extends Person implements IDisplay {
     public void display() {
         System.out.println("Id: " + prefixPlacing());
         super.display();
-       
+        System.out.println("Licence Number: " + getLicenceNumber());
+        System.out.println("Driving History: " + isDrivingHistoryCleared());
+        System.out.println("Salary: $" + getSalary());
+        System.out.println();
 
     }
 
