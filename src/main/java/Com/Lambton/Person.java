@@ -49,6 +49,12 @@ public class Person {
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
+    public void setLastName(String lName) {
+        this.lastName= lName;
+    }
+    
+
+    }
 
 
 
@@ -59,4 +65,6 @@ public class Person {
 
 
 
-}
+
+
+
