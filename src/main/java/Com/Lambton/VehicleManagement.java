@@ -14,6 +14,9 @@ public class VehicleManagement {
         BUS
 
     }
+    public enum VEHICLETYPE{
+        
+    }
 
 
 
