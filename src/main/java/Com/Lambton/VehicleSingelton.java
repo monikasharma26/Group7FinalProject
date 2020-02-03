@@ -23,7 +23,12 @@ public class VehicleSingelton {
         return this.vehicleRentArrayList;
     }
     //Add element to array
-   
+
+    public void addToArray(VehicleRent vehicleRent) {
+        vehicleRentArrayList.add(vehicleRent);
+    }
+
+  
 
 }
 
