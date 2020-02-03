@@ -48,7 +48,9 @@ public class Driver extends Person implements IDisplay {
     }
 
     public void display() {
-      
+        System.out.println("Id: " + prefixPlacing());
+        super.display();
+       
 
     }
 
