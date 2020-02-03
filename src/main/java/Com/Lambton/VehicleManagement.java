@@ -9,30 +9,10 @@ public class VehicleManagement {
 
     }
     public enum PERSONPREFIX{
-         CO,
-         DR,
-         OW
+        
     }
-    public enum FUEL{
-          Petrol,
-          Diesel,
-          Electric
 
-    }
-    public enum VEHICLETYPE{
-        CAR,
-        MOT,
-        BUS
-    }
-    public enum CarType{
-        Hatchback,
-        Sedan,
-        MPV,
-        SUV,
-        Crossover,
-        Coupe,
-        Convertible
-    }
+
 
 
 }
