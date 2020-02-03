@@ -13,7 +13,10 @@ public class VehicleManagement {
          OW
     }
     public enum FUEL{
-        
+          Petrol,
+          Diesel,
+          Electric
+
     }
 
 
