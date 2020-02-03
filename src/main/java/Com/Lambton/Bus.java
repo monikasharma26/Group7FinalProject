@@ -25,6 +25,12 @@ public class Bus extends Vehicle implements IDisplay {
         this.isWifiAvailable = isWifiAvailable;
     }
 
+    public BusType getTypeOfBus() {
+        return typeOfBus;
+    }
 
+    public void setTypeOfBus(BusType typeOfBus) {
+        this.typeOfBus = typeOfBus;
+    }
 
 }
