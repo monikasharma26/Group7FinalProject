@@ -27,7 +27,11 @@ public class Driver extends Person implements IDisplay {
 
     public String isDrivingHistoryCleared() {
         String status;
-      
+        if (isDrivingHistoryCleared == true) {
+            status = "Clear";
+        } else {
+            status = "Unclear";
+        }
     }
 
     public void setDrivingHistoryCleared(boolean drivingHistoryCleared) {
