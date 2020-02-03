@@ -1,6 +1,5 @@
 package Com.Lambton;
 
-import java.lang.reflect.Type;
 
 public class Car extends Vehicle implements IDisplay{
 
