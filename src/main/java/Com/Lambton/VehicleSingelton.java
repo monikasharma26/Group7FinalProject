@@ -8,6 +8,12 @@ public class VehicleSingelton {
     private ArrayList<VehicleRent> vehicleRentArrayList= null;
     private double totalBill;
 
-  
+    public static VehicleSingelton getInstance() {
+        if (ourInstance==null)
+            ourInstance = new VehicleSingelton();
+
+        return ourInstance;
+    }
+
 }
 
