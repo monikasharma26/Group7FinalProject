@@ -25,6 +25,9 @@ public class Driver extends Person implements IDisplay {
         this.licenceNumber = licenceNumber;
     }
 
+    public String isDrivingHistoryCleared() {
+    }
+
     public void setDrivingHistoryCleared(boolean drivingHistoryCleared) {
         isDrivingHistoryCleared = drivingHistoryCleared;
     }
