@@ -2,7 +2,7 @@ package Com.Lambton;
 
 import java.time.LocalDate;
 
-public abstract class Person implements  IDisplay{
+public abstract class Person implements IDisplay{
 
     public int id,age;
     public String firstName,lastName,mobileNumber,emailId,userName;

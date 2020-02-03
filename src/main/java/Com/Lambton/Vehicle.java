@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public abstract class Vehicle implements IDisplay{
+
     public static long vehicleIdentificationNumber;
     private String vehicleDescription;
     private String manufacturerName;
@@ -20,6 +21,7 @@ public abstract class Vehicle implements IDisplay{
     public int baseRate;
     public int ratePerKm;
     static String str;
+
     static HashMap<String, String> vehicleList = new HashMap<>();
     public Vehicle(long vehicleIdentificationNumber, String vehicleDescription, String manufacturerName,
                    boolean isSelfDrive, boolean isInsured, int noOfSeat, VehicleManagement.FUEL fuelType) {

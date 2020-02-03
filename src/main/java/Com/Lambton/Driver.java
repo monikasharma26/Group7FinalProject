@@ -1,4 +1,4 @@
 package Com.Lambton;
 
-public class Driver {
+public class Driver extends Person implements IDisplay {
 }
