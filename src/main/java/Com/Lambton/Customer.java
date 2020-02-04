@@ -72,14 +72,18 @@ public class Customer extends  Person
             stringBuilder.append(getAge()).append("\n");
         }
         checkTypeOfVehicle(stringBuilder);
-        stringBuilder.append("-Person  is a  Customer").append("\n")
-                .append("-mobileNumber: ")
+        stringBuilder.append("Person  is a  Customer").append("\n")
+                .append("mobileNumber: ")
                 .append(getMobileNumber()).append("\n")
-                .append(" -emailId: ")
+                .append("emailId: ")
                 .append(getEmailId()).append("\n")
-                .append(" -userName ")
-                .append(getUserName())
-                .append("\n -gender ")
+                .append("userName ")
+                .append(getUserName()).append("\n")
+                .append("Encrypted Password")
+                .append(getOriginalPassword()).append("\n")
+                .append("Decrypted Password")
+                .append(getPassword()).append("\n")
+                .append("gender ")
                 .append(getGender()).append("\n");
         return String.valueOf(stringBuilder);
     }
@@ -88,15 +92,15 @@ public class Customer extends  Person
             stringBuilder.append("Person has no vehicle Registerd");
         } else if (vehicle instanceof Car) {
             stringBuilder.append("Person has a Car\n")
-                    .append(" -Type of Car: ").append(((Car) vehicle).getCarType())
-                    .append("\n -Color: ").append(((Car) vehicle).getCarColor()).append("\n");
+                    .append("Type of Car: ").append(((Car) vehicle).getCarType())
+                    .append("\nColor: ").append(((Car) vehicle).getCarColor()).append("\n");
         } else if (vehicle instanceof Motorcycle) {
             stringBuilder.append("Person has a MotorCycle\n")
-                    .append(" -Top Speed:: ").append(((Motorcycle) vehicle).getTopSpeed()+"km/hr").append("\n")
-                    .append("\n -Mileage: ").append(((Motorcycle) vehicle).getMilage()+" mpg").append("\n");
+                    .append("Top Speed:: ").append(((Motorcycle) vehicle).getTopSpeed()+"km/hr").append("\n")
+                    .append("Mileage: ").append(((Motorcycle) vehicle).getMilage()+" mpg").append("\n");
         }else if (vehicle instanceof Bus) {
             stringBuilder.append("Person has a Bus\n")
-                    .append(" -Bus Type:: ").append(((Bus) vehicle).getTypeOfBus()).append("\n");
+                    .append("Bus Type:: ").append(((Bus) vehicle).getTypeOfBus()).append("\n");
                    // .append("\n -Accessibility Service Avavilable: ").append(vehicle..isAccessibilityServiceAvailable())
                    // .append("\n -Wifi Available: ").append(getVehicle().isWifiAvailable()+);
         }

@@ -30,6 +30,9 @@ public class PdfGenerator {
                         for (Customer v: VehicleSingelton.getInstance().getArray()) {
                                 table.addCell(v.toString());
                         }
+                        for (VehicleRent v: VehicleSingelton.getInstance().getVehicleArrayList()) {
+                                table.addCell(v.toString());
+                        }
                         table.addCell("Total Bill "+s);
                         table.setSpacingBefore(50.0f);
                         table.setSpacingAfter(50.0f);

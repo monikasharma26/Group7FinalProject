@@ -48,7 +48,7 @@ public  class VehicleRent {
         if (Vehicle.vehicleList.containsKey(vehicleId)) {
             vehicleName = Vehicle.vehicleList.get(String.valueOf(vehicleId));
         } else {
-            vehicleName = "Invalid Vehicle Entry";
+            vehicleName = Vehicle.vehicleList.get(String.valueOf(vehicleId));
         }
         return vehicleName;
     }
@@ -138,8 +138,8 @@ public static void TotalAmount(){
         stringBuilder.append("Rent Start Date: ").append(getRentStartDate()).append("\n")
                 .append("Rent End Date: ").append(getRentEndDate()).append("\n")
                 .append("Customer Name: ").append(getCustomerName()).append("\n")
-                .append("-Vehicle Name: ").append(getVehicleName()).append("\n")
-                .append("-Vehicle Type: ").append(getVehicleType()).append("\n")
+             //   .append("-Vehicle Name: ").append(getVehicleName()).append("\n")
+                .append("Vehicle Type: ").append(getVehicleType()).append("\n")
                 .append("No. of Km. drived: ").append(getNoOfKmDrived() + "km").append("\n")
                 .append("Total bill to pay: $" ).append(getTotalFare());
         return String.valueOf(stringBuilder);

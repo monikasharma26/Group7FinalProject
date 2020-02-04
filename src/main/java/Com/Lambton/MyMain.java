@@ -47,19 +47,21 @@ public class MyMain
                 "Honda",true,false,5,VehicleManagement.FUEL.Petrol,
                 VehicleManagement.CarType.Sedan,"RED"));
 
-        Customer c3 = new Customer(11, "Anmol", "Singh","8766631257", "test@gmail.com",
-                "test", VehicleManagement.GENDER.Male, LocalDate.of(1993, 8, 12), "test123",
-                "Brampton", "Ont",new Bus("G1WL52M1W1104808","MiniBus",
+        Customer c3 = new Customer(11, "Aman", "Kaur","876663143", "aman@gmail.com",
+                "aman", VehicleManagement.GENDER.Female, LocalDate.of(1990, 4, 10), "aman123",
+                "Brampton", "Ont",new Bus("G1WL52M1W1101212","MiniBus",
                 "Honda",true,false,23, VehicleManagement.FUEL.Diesel,
                 VehicleManagement.BusType.MiniBus,
                 true,false));
 
-       Customer c4 = new Customer(12, "Kritima", "Kukreja","8766631257", "test@gmail.com",
-                "test", VehicleManagement.GENDER.Female, LocalDate.of(1996, 1, 5), "test123",
+       Customer c4 = new Customer(12, "Kritima", "Kukreja","876234257", "Krit@gmail.com",
+                "Kritima", VehicleManagement.GENDER.Female, LocalDate.of(1994, 7, 24), "kritima",
                 "North York", "Ont",new Motorcycle("G1WL52M1W110334","MotoroCycle",
-                "Honda",false,false,2,VehicleManagement.FUEL.Electric,34.5,
+                "Honda",true,false,2,VehicleManagement.FUEL.Electric,34.5,
                 15.6));
-
+        Driver d1 = new Driver(10, "IKroop", "Kaur","9988421530","ikroop@gmail.com","roop1",VehicleManagement.GENDER.Female,
+                LocalDate.of(1992, 1, 5),"test12",221212,true,5121.45);
+        d1.display();
        VehicleRent v1=new VehicleRent(11, LocalDate.of(2020, 01, 15),
                LocalDate.of(2020, 01, 25), VehicleManagement.VEHICLETYPE.BUS,
                "JHMZF1C67BS073397", 55.18f, new Bus("G1WL52M1W1104808","MiniBus",
@@ -84,8 +86,6 @@ public class MyMain
 
         PdfGenerator pdfGenerator= new PdfGenerator();
         pdfGenerator.PdfGenrator();
-
-
 
     }
 

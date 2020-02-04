@@ -157,8 +157,8 @@ public abstract class Person implements IDisplay{
         System.out.println("Mobile Number: " + getMobileNumber()+"");
      //   System.out.println("Age: " + getAge() + " years");
         System.out.println("User name: " + getUserName()+"");
-       // System.out.println("Password: " + getPassword());
-      System.out.println("Original password: " +getOriginalPassword() +"");
+        System.out.println("Password: " + getPassword());
+      //System.out.println("Original password: " +getOriginalPassword() +"");
       return toString();
     }
     private static void VerifyProvidedPassword(String providedPassword,String securePassword,String salt)
